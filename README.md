@@ -5,6 +5,8 @@ To run download curveFitGA.py, geno.py, and functions.py
 
 Set the permissions in curveFitGA.py to Allow executing file as Program(the other two files should need no modification).
 
+run with the -h or --help flag for information
+
 
 Parameters
 
