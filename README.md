@@ -14,7 +14,7 @@ Parameters
 
 "output_name", "specify file output name, if no path is included the file will output where the script is located"
 
-"-a", "--arity", default=1, "The number of exponential terms to fit. Default is one."
+"-a", "--arity", default=1, type=int, "The number of exponential terms to fit. Default is one."
 
 "-v", "--verbosity", default=False, action='store_true', help="Enabling verbosity will provide more output during evolution"
 
