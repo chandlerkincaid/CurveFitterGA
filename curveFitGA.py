@@ -12,8 +12,8 @@ file_parser = argparse.ArgumentParser(description="Hello, this tool optimizes su
                                                   "to fit a curve of plotted data.")
 file_parser.add_argument("data", help="input for the program in csv format. First column must be time."
                                       "Remaining columns are data sets. Columns must be equal length. No Header.")
-file_parser.add_argument("output_name", help="specify file output name, if no path is included the "
-                                             "file will output where the script is located")
+#file_parser.add_argument("output_name", help="specify file output name, if no path is included the "
+#                                             "file will output where the script is located")
 file_parser.add_argument("-a", "--arity", default=1, type=int, help="The number of exponential terms to fit. Default is one.")
 file_parser.add_argument("-g", "--params", nargs=10, type=float, default=[-10, 10, 100, 1000, 100, 0.4, 0.3, 0.9, 0.3, 0.1],
                          help="optional parameter list for genetic algorithm:"

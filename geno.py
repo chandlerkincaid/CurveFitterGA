@@ -20,7 +20,7 @@ def evolve(time, xdata, arity, min_start, max_start, pop, gen, stop_num, mutatio
     def fitness(organism, f_func, f_xdata, f_time):
         y_prediction = [f_func(t, organism) for t in f_time]
         absolute_error = np.absolute(np.subtract(y_prediction, f_xdata))
-        return fit_offset - np.mean(absolute_error)
+        return fit_offset - np.nanmean(absolute_error)
 
     def crossover(parent_a, parent_b):
         both = zip(parent_a.p, parent_b.p)
@@ -87,7 +87,7 @@ def evolve(time, xdata, arity, min_start, max_start, pop, gen, stop_num, mutatio
             print("Data: " + str(cur_seq + 1) + " Gen : " + str(current_gen) + " Non-Improve: "
                   + str(non_improving_counter))
             # print("GenBest: " + "%.4f" % (most_fit.f - fit_offset))
-            print("GlobalBest: " + "%.6f" % (goat.f - fit_offset))
+            print("GlobalBest: " + "%.8f" % (goat.f - fit_offset))
             # print(goat.p)
             if verbose:
                 print("Average: " + str(average_fit - fit_offset))
